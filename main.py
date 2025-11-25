@@ -220,16 +220,16 @@ def diagnostico_genetico(end_pos, choques, rep):
     print(f" - Bucles: {rep}")
 
     if choques > MOVE_LEN * 0.3:
-        print(" 👉 Falló por múltiples choques.")
+        print("  Falló por múltiples choques.")
         return "Exceso de choques contra paredes"
     elif rep > MOVE_LEN * 0.3:
-        print(" 👉 Cayó en bucles.")
+        print("  Cayó en bucles.")
         return "Exceso de pasos repetidos (bucles)"
     elif dist > SIZE//2:
-        print(" 👉 No se acercó a la meta.")
+        print("  No se acercó a la meta.")
         return "No evolucionó individuos cercanos a la meta"
     else:
-        print(" 👉 Evolucionó, pero no llegó.")
+        print("  Evolucionó, pero no llegó.")
         return "Insuficiente calidad evolutiva"
 
 
